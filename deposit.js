@@ -12,7 +12,10 @@ document.getElementById("btn-deposit").addEventListener("click", function () {
   const newDepositTotal = previousDepositTotal + newDepositAmount;
   depositTotalElement.innerText = newDepositTotal;
 
-  const withdrawField = document.getElementById("withdraw-field");
-  const newWithdrawAmountString = withdrawField.value;
-  const newWithdrawAmount = parseFloat(newWithdrawAmountString);
+  const balanceTotalElement = document.getElementById("balance-total");
+  const previousBalanceTotalString = balanceTotalElement.innerText;
+  const previousBalanceTotal = parseFloat(previousBalanceTotalString);
+
+  const newBalanceTotal = previousBalanceTotal + newDepositAmount;
+  balanceTotalElement.innerText = newBalanceTotal;
 });
